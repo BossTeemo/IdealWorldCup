@@ -21,6 +21,9 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
+        <!-- ChoiceActivity 추가-->
+        <activity android:name=".ChoiceActivity" />
     </application>
 
 </manifest>

@@ -2,10 +2,10 @@ package com.example.idealworldcup;
 
 import android.os.Bundle;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.fragment.app.FragmentTransaction;
 
 import android.view.View;
 import android.widget.Button;
+import android.content.Intent;// Intent를 사용하기 위해 추가함
 
 public class MainActivity extends AppCompatActivity {
 
@@ -19,13 +19,17 @@ public class MainActivity extends AppCompatActivity {
         startButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                //새로운 액티비티 (ChoiceActivity)로 전환
+                Intent intent = new Intent(MainActivity.this, ChoiceActivity.class);
+                startActivity(intent);
 
-                ChoiceFragment choiceFragment = new ChoiceFragment();
-
-                FragmentTransaction transaction = getSupportFragmentManager().beginTransaction();
-                transaction.replace(R.id.fragment_container, choiceFragment);  // R.id.fragment_container는 activity_main.xml에 있는 FrameLayout의 ID여야 합니다.
-                transaction.addToBackStack(null); // 이를 통해 뒤로 가기 버튼을 눌렀을 때 이전 상태로 돌아갈 수 있습니다.
-                transaction.commit();
+                //choice_screen.xml로 넘어가는 동작으로 수정하기위해 이 다음부분을 주석처리함.
+//                ChoiceFragment choiceFragment = new ChoiceFragment();
+//
+//                FragmentTransaction transaction = getSupportFragmentManager().beginTransaction();
+//                transaction.replace(R.id.fragment_container, choiceFragment);  // R.id.fragment_container는 activity_main.xml에 있는 FrameLayout의 ID여야 합니다.
+//                transaction.addToBackStack(null); // 이를 통해 뒤로 가기 버튼을 눌렀을 때 이전 상태로 돌아갈 수 있습니다.
+//                transaction.commit();
             }
         });
     }
