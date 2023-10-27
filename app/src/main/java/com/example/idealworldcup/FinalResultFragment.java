@@ -10,6 +10,8 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 
+import java.util.ArrayList;
+
 public class FinalResultFragment extends Fragment {
 
     private TextView textViewFinalJobName;
@@ -25,11 +27,16 @@ public class FinalResultFragment extends Fragment {
         textViewFinalJobDescription = view.findViewById(R.id.textView_finalJobDescription);
         textViewFinalSubjects = view.findViewById(R.id.textView_finalSubjects);
 
-        // 예시: 선택된 직업과 관련 과목을 표시
-        // 이 부분은 실제 로직에 따라 수정되어야 합니다.
-        // textViewFinalJobName.setText(selectedFinalJobName);
-        // textViewFinalJobDescription.setText(selectedFinalJobDescription);
-        // textViewFinalSubjects.setText(relatedSubjects);
+        if (getArguments() != null) {
+            textViewFinalJobName.setText(getArguments().getString("selectedJobName"));
+            textViewFinalJobDescription.setText(getArguments().getString("selectedJobDescription"));
+
+            ArrayList<String> jobSubjects = getArguments().getStringArrayList("selectedJobSubjects");
+            if (jobSubjects != null) {
+                textViewFinalSubjects.setText(String.join(",", jobSubjects));
+            }
+        }
+
 
         return view;
     }
