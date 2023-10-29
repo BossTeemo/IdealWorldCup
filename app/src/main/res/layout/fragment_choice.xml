@@ -53,6 +53,11 @@
         app:layout_constraintEnd_toEndOf="parent" />
 
     <!-- 첫 번째 직업 이미지 -->
+
+    <!-- 두 번째 직업 이미지 -->
+
+    <!-- 첫 번째 직업 텍스트 -->
+
     <ImageView
         android:id="@+id/imageView_job1"
         android:layout_width="0dp"
@@ -63,9 +68,9 @@
         app:layout_constraintEnd_toStartOf="@+id/imageView_job2"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView_selectionProgress"
+        app:layout_constraintVertical_bias="0.932"
         app:layout_constraintWidth_percent="0.45" />
 
-    <!-- 두 번째 직업 이미지 -->
     <ImageView
         android:id="@+id/imageView_job2"
         android:layout_width="0dp"
@@ -76,9 +81,9 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/imageView_job1"
         app:layout_constraintTop_toBottomOf="@+id/textView_selectionProgress"
+        app:layout_constraintVertical_bias="0.932"
         app:layout_constraintWidth_percent="0.45" />
 
-    <!-- 첫 번째 직업 텍스트 -->
     <TextView
         android:id="@+id/textView_job1"
         android:layout_width="0dp"
@@ -98,50 +103,53 @@
         app:layout_constraintStart_toStartOf="parent" />
 
     <!-- 두 번째 직업 텍스트 -->
+
+    <!-- 첫 번째 직업 선택 버튼 -->
     <TextView
         android:id="@+id/textView_job2"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
         android:layout_marginBottom="20dp"
+        android:gravity="center"
         android:paddingTop="0dp"
         android:paddingBottom="0dp"
-        android:gravity="center"
         android:text="직업2"
         android:textSize="18sp"
         android:textStyle="bold"
-        app:layout_constraintWidth_percent="0.45"
         app:layout_constraintBottom_toTopOf="@+id/button_selectJob2"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/textView_job1" />
+        app:layout_constraintStart_toEndOf="@+id/textView_job1"
+        app:layout_constraintWidth_percent="0.45" />
 
-    <!-- 첫 번째 직업 선택 버튼 -->
+    <!-- 두 번째 직업 선택 버튼 -->
     <Button
         android:id="@+id/button_selectJob1"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="116dp"
         android:paddingTop="0dp"
         android:paddingBottom="0dp"
-        android:layout_marginEnd="8dp"
         android:text="선택"
-        app:layout_constraintWidth_percent="0.45"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/button_selectJob2"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintHorizontal_chainStyle="packed" />
+        app:layout_constraintEnd_toStartOf="@+id/button_selectJob2"
+        app:layout_constraintHorizontal_chainStyle="packed"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintWidth_percent="0.45" />
 
-    <!-- 두 번째 직업 선택 버튼 -->
     <Button
         android:id="@+id/button_selectJob2"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
+        android:layout_marginBottom="116dp"
         android:paddingTop="0dp"
         android:paddingBottom="0dp"
         android:text="선택"
-        app:layout_constraintWidth_percent="0.45"
-        app:layout_constraintStart_toEndOf="@+id/button_selectJob1"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintBottom_toBottomOf="parent" />
+        app:layout_constraintStart_toEndOf="@+id/button_selectJob1"
+        app:layout_constraintWidth_percent="0.45" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

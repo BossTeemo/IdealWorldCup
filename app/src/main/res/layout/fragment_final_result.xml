@@ -46,39 +46,41 @@
         app:layout_constraintTop_toBottomOf="@id/imageView_finalJobImage"
         app:layout_constraintWidth_percent="0.8"/>
 
+    <!-- "다음 과목들을 수강하면 좋아요!" 텍스트 -->
+
+    <!-- 필요한 핵심 과목 텍스트 -->
+
     <TextView
         android:id="@+id/textView_finalJobDescription"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="12dp"
         android:gravity="center"
         android:text="최종 선택한 직업의 설명"
         android:textSize="16sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/textView_finalJobName"
-        app:layout_constraintWidth_percent="0.8"/>
+        app:layout_constraintWidth_percent="0.8" />
 
-    <!-- "다음 과목들을 수강하면 좋아요!" 텍스트 -->
     <TextView
         android:id="@+id/textView_finalSubjects2"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="28dp"
         android:gravity="center"
         android:text="다음 과목들을 수강하면 좋아요!"
         android:textSize="18sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/textView_finalJobDescription"
-        app:layout_constraintWidth_percent="0.8"/>
+        app:layout_constraintWidth_percent="0.8" />
 
-    <!-- 필요한 핵심 과목 텍스트 -->
     <TextView
         android:id="@+id/textView_finalSubjects"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="8dp"
         android:gravity="center"
         android:text="핵심 과목: ..."
         android:textSize="20sp"
@@ -86,16 +88,16 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView_finalSubjects2"
-        app:layout_constraintWidth_percent="0.8"/>
+        app:layout_constraintWidth_percent="0.8" />
 
     <Button
         android:id="@+id/button_restart"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
         android:text="다시하기"
-        app:layout_constraintTop_toBottomOf="@id/textView_finalSubjects"
-        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        android:layout_marginTop="16dp"/>
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/textView_finalSubjects" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
