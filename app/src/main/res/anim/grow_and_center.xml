@@ -4,7 +4,7 @@
 
     <!-- 글자가 커지는 애니메이션 -->
     <scale
-        android:duration="500"
+        android:duration="100"
         android:fromXScale="1.0"
         android:toXScale="1.2"
         android:fromYScale="1.0"
