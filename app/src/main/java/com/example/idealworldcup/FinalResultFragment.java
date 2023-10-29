@@ -4,6 +4,8 @@ import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.view.animation.Animation;
+import android.view.animation.AnimationUtils;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
@@ -11,6 +13,7 @@ import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 
 import java.util.ArrayList;
+import android.util.Log;
 
 public class FinalResultFragment extends Fragment {
 
@@ -27,6 +30,14 @@ public class FinalResultFragment extends Fragment {
         textViewFinalJobDescription = view.findViewById(R.id.textView_finalJobDescription);
         textViewFinalSubjects = view.findViewById(R.id.textView_finalSubjects);
 
+        // 애니메이션 리소스를 로드합니다.
+        Animation slideInAnimation = AnimationUtils.loadAnimation(getActivity(), R.anim.slide_in_right_to_left);
+
+        // 애니메이션을 시작합니다.
+        textViewFinalJobName.startAnimation(slideInAnimation);
+        textViewFinalJobDescription.startAnimation(slideInAnimation);
+        textViewFinalSubjects.startAnimation(slideInAnimation);
+
         if (getArguments() != null) {
             textViewFinalJobName.setText(getArguments().getString("selectedJobName"));
             textViewFinalJobDescription.setText(getArguments().getString("selectedJobDescription"));
@@ -35,8 +46,11 @@ public class FinalResultFragment extends Fragment {
             if (jobSubjects != null) {
                 textViewFinalSubjects.setText(String.join(",", jobSubjects));
             }
+        } else {
+            Log.d("FinalResultFragment", "getArguments() is null"); // 로그 추가
         }
 
+        Log.d("FinalResultFragment", "onCreateView executed"); // 로그 추가
 
         return view;
     }
@@ -47,6 +61,8 @@ public class FinalResultFragment extends Fragment {
             textViewFinalJobName.setText(jobData.getJobName());
             textViewFinalJobDescription.setText(jobData.getJobDescription());
             textViewFinalSubjects.setText(String.join(",", jobData.getSubjects()));
+        } else {
+            Log.d("FinalResultFragment", "Text views are null"); // 로그 추가
         }
     }
 }
