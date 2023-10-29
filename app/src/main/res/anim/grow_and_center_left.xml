@@ -2,21 +2,14 @@
 <set xmlns:android="http://schemas.android.com/apk/res/android"
     android:fillAfter="true">
 
-    <!-- 크기를 키우는 애니메이션 -->
+    <!-- 글자가 커지는 애니메이션 -->
     <scale
         android:duration="700"
         android:fromXScale="1.0"
-        android:toXScale="1.5"
+        android:toXScale="1.2"
         android:fromYScale="1.0"
-        android:toYScale="1.5"
+        android:toYScale="1.2"
         android:pivotX="50%"
         android:pivotY="50%" />
 
-    <!-- 화면 중앙으로 이동하는 애니메이션 -->
-    <translate
-        android:duration="700"
-        android:fromYDelta="0%p"
-        android:toYDelta="50%p"
-        android:fromXDelta="0%p"
-        android:toXDelta="40%p" />
 </set>

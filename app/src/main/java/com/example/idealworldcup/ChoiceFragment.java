@@ -8,6 +8,7 @@ import android.view.ViewGroup;
 import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
 import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.TextView;
 import android.content.Intent;
 
@@ -30,6 +31,9 @@ public class ChoiceFragment extends Fragment {
     private TextView textViewJob2;
     private TextView textViewRoundInfo; // 라운드 정보 TextView
     private TextView textViewSelectionProgress; // 선택 진행 상황 TextView
+
+    private ImageView imageViewJob1;
+    private ImageView imageViewJob2;
     private int selectionCount = 1; // 선택 횟수 초기화
 
     private Button buttonSelectJob1;
@@ -61,7 +65,8 @@ public class ChoiceFragment extends Fragment {
 
         currentSelection = new ArrayList<>();       //2개의 리스트 저장
 
-
+        imageViewJob1 = view.findViewById(R.id.imageView_job1);
+        imageViewJob2 = view.findViewById(R.id.imageView_job2);
         textViewJob1 = view.findViewById(R.id.textView_job1);
         textViewJob2 = view.findViewById(R.id.textView_job2);
         buttonSelectJob1 = view.findViewById(R.id.button_selectJob1);
@@ -119,6 +124,11 @@ public class ChoiceFragment extends Fragment {
 
         textViewJob1.setText(currentSelection.get(0).getJobName());
         textViewJob2.setText(currentSelection.get(1).getJobName());
+
+
+        imageViewJob1.setImageResource(currentSelection.get(0).getImageResourceId());
+        imageViewJob2.setImageResource(currentSelection.get(1).getImageResourceId());
+
     }
 
 

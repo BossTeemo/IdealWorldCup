@@ -6,41 +6,95 @@
     android:layout_height="match_parent"
     android:padding="16dp">
 
-    <!-- 최종 선택한 직업의 이름 텍스트 -->
+    <!-- "당신에게 맞는 직업은?" 텍스트 -->
+
     <TextView
-        android:id="@+id/textView_finalJobName"
-        android:layout_width="match_parent"
+        android:id="@+id/textView_finalSubjects2"
+        android:layout_width="385dp"
         android:layout_height="wrap_content"
-        android:text="최종 선택한 직업"
-        android:textSize="24sp"
+        android:layout_marginTop="80dp"
+        android:gravity="center"
+        android:text="다음 과목들을 수강하면 좋아요!"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.384"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/textView_finalJobDescription" />
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="당신에게 맞는 직업은?"
         android:textStyle="bold"
+        android:textSize="30sp"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent" />
 
-    <!-- 최종 선택한 직업의 설명 텍스트 -->
+    <!-- 최종 선택한 직업 이미지 -->
+    <ImageView
+        android:id="@+id/imageView_finalJobImage"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="20dp"
+        app:layout_constraintDimensionRatio="1:1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/textView4"
+        app:layout_constraintWidth_percent="0.8" />
+
+    <!-- 최종 선택한 직업 이름 -->
+    <TextView
+        android:id="@+id/textView_finalJobName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:gravity="center"
+        android:text="최종 선택한 직업"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/imageView_finalJobImage" />
+
+
     <TextView
         android:id="@+id/textView_finalJobDescription"
         android:layout_width="match_parent"
-        android:layout_height="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:gravity="center"
         android:text="최종 선택한 직업의 설명"
-        android:textSize="18sp"
-        app:layout_constraintTop_toBottomOf="@+id/textView_finalJobName"
-        app:layout_constraintStart_toStartOf="parent"
+        android:textSize="16sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintBottom_toTopOf="@+id/textView_finalSubjects"
-        app:layout_constraintVertical_weight="1" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/textView_finalJobName" />
+
+
 
     <!-- 필요한 핵심 과목 텍스트 -->
     <TextView
         android:id="@+id/textView_finalSubjects"
-        android:layout_width="match_parent"
+        android:layout_width="385dp"
         android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:gravity="center"
         android:text="핵심 과목: ..."
-        android:textSize="16sp"
-        app:layout_constraintTop_toBottomOf="@+id/textView_finalJobDescription"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView_finalSubjects2" />
+
+    <Button
+        android:id="@+id/button_restart"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="다시하기"
+        app:layout_constraintTop_toBottomOf="@id/textView_finalSubjects"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintBottom_toBottomOf="parent" />
+        android:layout_marginTop="16dp"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
