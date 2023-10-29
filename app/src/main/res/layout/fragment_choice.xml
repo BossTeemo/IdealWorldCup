@@ -9,7 +9,6 @@
     android:paddingTop="80dp"
     android:paddingBottom="70dp">
 
-
     <!-- 나에게 맞는 직업은? 텍스트 -->
     <TextView
         android:id="@+id/textView3"
@@ -20,7 +19,6 @@
         android:text="나에게 맞는 직업은?"
         android:textSize="30sp"
         android:textStyle="bold"
-
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -54,9 +52,6 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent" />
 
-
-
-
     <!-- 첫 번째 직업 이미지 -->
     <ImageView
         android:id="@+id/imageView_job1"
@@ -68,7 +63,6 @@
         app:layout_constraintEnd_toStartOf="@+id/imageView_job2"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView_selectionProgress"
-        app:layout_constraintVertical_bias="0.944"
         app:layout_constraintWidth_percent="0.45" />
 
     <!-- 두 번째 직업 이미지 -->
@@ -82,7 +76,6 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/imageView_job1"
         app:layout_constraintTop_toBottomOf="@+id/textView_selectionProgress"
-        app:layout_constraintVertical_bias="0.944"
         app:layout_constraintWidth_percent="0.45" />
 
     <!-- 첫 번째 직업 텍스트 -->
@@ -150,4 +143,5 @@
         app:layout_constraintStart_toEndOf="@+id/button_selectJob1"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintBottom_toBottomOf="parent" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>
